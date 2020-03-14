@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">GameForTheAges</string>
+    <string name="play">Play!</string>
+
+    <string name="maincharacteranim">maincharacter</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //level 1
+    <string name="dialoge_1">Хей, дружище, не против, если я поиграю с тобой </string>
+    <string name="yes">Конечно!</string>
+
+
+
+
+    //level 2
+    <string name="button1">Фюзеляж</string>
+    <string name="button2">Топливный отсек</string>
+    <string name="button3">Двигатель</string>
+
+
+
+
+
+</resources>
