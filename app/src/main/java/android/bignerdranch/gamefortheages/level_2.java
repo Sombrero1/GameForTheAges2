@@ -112,28 +112,39 @@ public class level_2 extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+
+
+
             case R.id.Button1:
-                Toast.makeText(getContext(), "net", Toast.LENGTH_SHORT).show();
+
+                Animations.AnimateMainButton(Button1,Button1Text,R.drawable.big_button_1,R.drawable.big_button_2);
+                CloudText.setText(R.string.answer1);
 
 
                 break;
 
             case R.id.Button2:
-                Toast.makeText(getContext(), "da", Toast.LENGTH_SHORT).show();
+                Animations.AnimateMainButton(Button2,Button2Text,R.drawable.big_button_1,R.drawable.big_button_2);
+                CloudText.setText(R.string.answer2);
                 break;
 
 
 
             case R.id.Button3:
-                Toast.makeText(getContext(), "neeeeeeeeeet", Toast.LENGTH_SHORT).show();
+                Animations.AnimateMainButton(Button3,Button3Text,R.drawable.big_button_1,R.drawable.big_button_2);
+                CloudText.setText(R.string.answer3);
                 break;
 
 
 
 
         }
+        /*
+        Button1.setClickable(false);
+        Button2.setClickable(false);
+        Button3.setClickable(false);
 
-
+*/
 
     }
 }

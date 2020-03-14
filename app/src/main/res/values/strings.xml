@@ -19,6 +19,10 @@
     <string name="button2">Топливный отсек</string>
     <string name="button3">Двигатель</string>
 
+    <string name="answer1">Хмм, наверно ты рассуждал с точки зрения...</string>
+    <string name="answer2">Если считать, что....</string>
+    <string name="answer3">Да, в данном случае ответ правильный!</string>
+
 
 
 
