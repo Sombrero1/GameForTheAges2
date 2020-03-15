@@ -19,11 +19,12 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class AfterStartEp1 extends AppCompatActivity {
+public class AfterStartEp1 extends AppCompatActivity implements communicationFragmentAndActivity{
 
 
    private ArrayList<Fragment> fragments= new ArrayList<Fragment>();
    private  Fragment ActivityFragment;
+   private int numberOfFragment=0;
 
 
 
@@ -37,9 +38,10 @@ public class AfterStartEp1 extends AppCompatActivity {
 
         fragments.add(new level_1());
         fragments.add(new level_2());
+        fragments.add(new level_3());
 
 
-        ActivityFragment = (Fragment)fragments.get(1);
+        ActivityFragment = (Fragment)fragments.get(numberOfFragment);
         replaceFragment(ActivityFragment);
 
 
@@ -54,6 +56,7 @@ public class AfterStartEp1 extends AppCompatActivity {
     void replaceFragment(Fragment f){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.anim.diagonaltranslate,R.anim.alpha);
         fragmentTransaction.replace(R.id.replace_, f);
         fragmentTransaction.commit();
 
@@ -62,4 +65,17 @@ public class AfterStartEp1 extends AppCompatActivity {
 
     }
 
+    @Override
+    public void MailFromFragment(int numberOfFragment)
+    {
+        this.numberOfFragment=numberOfFragment;
+
+        ActivityFragment = (Fragment)fragments.get(numberOfFragment);
+        replaceFragment(ActivityFragment);
+
+
+
+
+
+    }
 }

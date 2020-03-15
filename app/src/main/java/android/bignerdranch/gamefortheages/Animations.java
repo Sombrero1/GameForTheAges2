@@ -36,6 +36,9 @@ class Animations {
 
 
 
+
+
+
     public static boolean  AnimateMainButton(final ImageView Button, TextView textOfBut, final int startPicture, final int endPicture){
         Button.setImageResource(endPicture);
 

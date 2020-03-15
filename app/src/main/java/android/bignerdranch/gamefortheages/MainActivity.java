@@ -18,10 +18,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.transition.TransitionManager;
 import android.util.Log;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,9 +36,13 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
     private  ImageView maincharacter;
     private Activity mainactivity;
     private Context mContext;
+    private ConstraintLayout tr;
 
     private MediaPlayer bg_music;
+    private MediaPlayer change;
 
+
+    int width,height;
 
     private boolean pressedButton=false;
 
@@ -47,11 +53,20 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
 
 
 
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
-            setContentView(R.layout.activity_main);
+        Display display = getWindowManager().getDefaultDisplay();
+         width = display.getWidth();
+         height = display.getHeight();
 
 
-            bg_music = MediaPlayer.create(this, R.raw.bg_music);
+
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+        setContentView(R.layout.activity_main);
+
+
+        bg_music = MediaPlayer.create(this, R.raw.bg_music);
+        change = MediaPlayer.create(this, R.raw.change);
+
 
 
         maincharacter = (ImageView)findViewById(R.id.maincharacter1);
@@ -60,7 +75,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
         play = (TextView) findViewById(R.id.textView);
         mContext=this;
 
-       // ConstraintLayout tr = (ConstraintLayout) findViewById(R.id.Main);
+
+        tr = (ConstraintLayout) findViewById(R.id.Main);
 
         Animations.simpleAnimation(btn,R.animator.alpha_main_button, mContext);
         Animations.simpleAnimation(play, R.animator.alpha_main_button,mContext);
@@ -127,6 +143,11 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
 
 
                 Button.setImageResource(startPicture);
+
+
+                change.start();
+                //герой смывается вниз
+                maincharacter.animate().rotationBy(360f).setDuration(600).start();
 
 
                 Intent questionIntent = new Intent(MainActivity.this,

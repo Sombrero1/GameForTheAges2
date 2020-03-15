@@ -3,6 +3,7 @@ package android.bignerdranch.gamefortheages;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -12,8 +13,10 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,8 +26,9 @@ import java.util.Date;
 
 
 
-public class level_1 extends Fragment {
+public class level_1 extends Fragment implements  View.OnTouchListener{
     View view;
+    Activity mActivity;
 
 
     ImageView maincharacter;
@@ -63,40 +67,27 @@ public class level_1 extends Fragment {
 
 
         maincharacter = view.findViewById(R.id.maincharacter);
-        if(maincharacter!=null){
+
             maincharacter.setBackgroundResource(R.drawable.morg);
             mAnimationDrawable = (AnimationDrawable) maincharacter.getBackground();
             mAnimationDrawable.start();
 
 
 
-            final AnimatorSet cloudSet = (AnimatorSet) AnimatorInflater.loadAnimator(view.getContext(), R.animator.alpha_main_button);
-            cloudSet.setTarget(cloud_dialoge_1);
-            cloudSet.start();
-            cloud_dialoge_1.setImageResource(R.drawable.cloud_dialoge);
+            Animations.simpleAnimation(cloud_dialoge_1,R.animator.alpha_main_button, view.getContext());
+
+          //  cloud_dialoge_1.setImageResource(R.drawable.cloud_dialoge);
+
+            Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
 
 
-            AnimatorSet CloudTextSet = (AnimatorSet) AnimatorInflater.loadAnimator(view.getContext(), R.animator.alpha_main_button);
-            CloudTextSet.setTarget(CloudText);
-            CloudTextSet.start();
+            Button.setOnTouchListener(this);
 
 
 
 
-            maincharacter.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                if(!pressedButton) {
-                    Animations.AnimateMainButton(Button, ButtonText,R.drawable.square, R.drawable.square_2);
-                    pressedButton=true;
-
-                }
 
 
-                }
-            });
-        }
 
 
 
@@ -109,5 +100,25 @@ public class level_1 extends Fragment {
 
 
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Activity) mActivity=(Activity)context;
+
+
+
+
+    }
+
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        Animations.AnimateMainButton(Button,ButtonText,R.drawable.square,R.drawable.square_2);
+
+        (( communicationFragmentAndActivity) mActivity).MailFromFragment(1);
+
+
+        return false;
+    }
 
 }

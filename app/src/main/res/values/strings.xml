@@ -8,10 +8,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     //level 1
-    <string name="dialoge_1">Хей, дружище, не против, если я поиграю с тобой </string>
+    <string name="dialoge_1">Хей, дружище, не против, если я поиграю с тобой?</string>
     <string name="yes">Конечно!</string>
-
-
 
 
     //level 2
@@ -22,9 +20,6 @@
     <string name="answer1">Хмм, наверно ты рассуждал с точки зрения...</string>
     <string name="answer2">Если считать, что....</string>
     <string name="answer3">Да, в данном случае ответ правильный!</string>
-
-
-
 
 
 </resources>

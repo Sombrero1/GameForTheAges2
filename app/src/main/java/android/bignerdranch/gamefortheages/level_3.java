@@ -3,7 +3,6 @@ package android.bignerdranch.gamefortheages;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -25,9 +24,8 @@ import java.util.Date;
 
 
 
-public class level_2 extends Fragment implements View.OnClickListener {
+public class level_3 extends Fragment implements View.OnClickListener {
     View view;
-    Activity mActivity;
 
 
     ImageView maincharacter;
@@ -120,7 +118,6 @@ public class level_2 extends Fragment implements View.OnClickListener {
             case R.id.Button1:
 
                 Animations.AnimateMainButton(Button1,Button1Text,R.drawable.big_button_1,R.drawable.big_button_2);
-                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
                 CloudText.setText(R.string.answer1);
 
 
@@ -128,7 +125,6 @@ public class level_2 extends Fragment implements View.OnClickListener {
 
             case R.id.Button2:
                 Animations.AnimateMainButton(Button2,Button2Text,R.drawable.big_button_1,R.drawable.big_button_2);
-                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
                 CloudText.setText(R.string.answer2);
                 break;
 
@@ -136,35 +132,24 @@ public class level_2 extends Fragment implements View.OnClickListener {
 
             case R.id.Button3:
                 Animations.AnimateMainButton(Button3,Button3Text,R.drawable.big_button_1,R.drawable.big_button_2);
-                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
-                CloudText.setText(R.string.answer3);
 
+                CloudText.setText(R.string.answer3);
                 break;
 
 
 
 
         }
-
-         (( communicationFragmentAndActivity) mActivity).MailFromFragment(0); //следующий левел
-
-        /*
+        /* блок кнопки
         Button1.setClickable(false);
         Button2.setClickable(false);
         Button3.setClickable(false);
 
 */
 
-    }
 
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof Activity) mActivity=(Activity)context;
-
-
-
+        //продолжение
 
     }
 }
