@@ -1,9 +1,12 @@
-package android.bignerdranch.gamefortheages;
+package android.bignerdranch.gamefortheages.levels;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.app.Activity;
+import android.bignerdranch.gamefortheages.Animations;
+import android.bignerdranch.gamefortheages.R;
+import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,6 +14,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.ColorInt;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
@@ -24,8 +28,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+
+import java.util.ArrayList;
 import java.util.Date;
 
+import im.dacer.androidcharts.LineView;
 
 
 public class level_1 extends Fragment implements  View.OnTouchListener{
@@ -62,9 +73,20 @@ public class level_1 extends Fragment implements  View.OnTouchListener{
       //  ConstraintLayout fff= (ConstraintLayout) view.findViewById(R.id.level_1);
         //fff.setBackgroundColor(Color.WHITE);
 //
+        GraphView graph = (GraphView) view.findViewById(R.id.graph);
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
+                new DataPoint(0, 0),
+                new DataPoint(3, 5),
+                new DataPoint(6, 0),
 
 
+        });
 
+
+        graph.setTitleTextSize(23);
+        graph.setTitle("fff");
+        graph.setCursorMode(true);
+        graph.addSeries(series);
 
 
         cloud_dialoge_1 = (ImageView) view.findViewById(R.id.cloud_dialoge_first);
@@ -125,7 +147,7 @@ public class level_1 extends Fragment implements  View.OnTouchListener{
     public boolean onTouch(View v, MotionEvent event) {
         Animations.AnimateMainButton(Button,ButtonText,R.drawable.square,R.drawable.square_2);
 
-        (( communicationFragmentAndActivity) mActivity).MailFromFragment(1);
+        ((communicationFragmentAndActivity) mActivity).MailFromFragment(1);
 
 
         return false;

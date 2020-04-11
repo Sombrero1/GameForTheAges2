@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-class Animations {
+public class Animations {
 
 
 
@@ -26,7 +26,7 @@ class Animations {
 
 
 
-    static void simpleAnimation(View v, int xmlAnimation, Context mContext){
+    static public void simpleAnimation(View v, int xmlAnimation, Context mContext){
         AnimatorSet beginImageSet = (AnimatorSet) AnimatorInflater.loadAnimator(mContext, xmlAnimation);
         beginImageSet.setTarget(v);
         beginImageSet.start();

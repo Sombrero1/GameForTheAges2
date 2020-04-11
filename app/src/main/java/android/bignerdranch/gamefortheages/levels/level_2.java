@@ -1,31 +1,27 @@
-package android.bignerdranch.gamefortheages;
+package android.bignerdranch.gamefortheages.levels;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
+import android.app.Activity;
+import android.bignerdranch.gamefortheages.Animations;
+import android.bignerdranch.gamefortheages.R;
+import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
 import android.content.Context;
-import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Date;
 
 
-
-public class level_3 extends Fragment implements View.OnClickListener {
+public class level_2 extends Fragment implements View.OnClickListener {
     View view;
+    Activity mActivity;
 
 
     ImageView maincharacter;
@@ -75,9 +71,10 @@ public class level_3 extends Fragment implements View.OnClickListener {
         Button3.setOnClickListener(this);
 
 
-
-
-
+        // TEST
+      //  ConstraintLayout fff= (ConstraintLayout) view.findViewById(R.id.level_1);
+       // fff.setBackgroundColor(Color.WHITE);
+//
 
 
 
@@ -118,6 +115,7 @@ public class level_3 extends Fragment implements View.OnClickListener {
             case R.id.Button1:
 
                 Animations.AnimateMainButton(Button1,Button1Text,R.drawable.big_button_1,R.drawable.big_button_2);
+                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
                 CloudText.setText(R.string.answer1);
 
 
@@ -125,6 +123,7 @@ public class level_3 extends Fragment implements View.OnClickListener {
 
             case R.id.Button2:
                 Animations.AnimateMainButton(Button2,Button2Text,R.drawable.big_button_1,R.drawable.big_button_2);
+                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
                 CloudText.setText(R.string.answer2);
                 break;
 
@@ -132,24 +131,35 @@ public class level_3 extends Fragment implements View.OnClickListener {
 
             case R.id.Button3:
                 Animations.AnimateMainButton(Button3,Button3Text,R.drawable.big_button_1,R.drawable.big_button_2);
-
+                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
                 CloudText.setText(R.string.answer3);
+
                 break;
 
 
 
 
         }
-        /* блок кнопки
+
+         ((communicationFragmentAndActivity) mActivity).MailFromFragment(0); //следующий левел
+
+        /*
         Button1.setClickable(false);
         Button2.setClickable(false);
         Button3.setClickable(false);
 
 */
 
+    }
 
 
-        //продолжение
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Activity) mActivity=(Activity)context;
+
+
+
 
     }
 }

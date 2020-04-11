@@ -1,4 +1,4 @@
-package android.bignerdranch.gamefortheages;
+package android.bignerdranch.gamefortheages.DrawView;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -1,4 +1,4 @@
-package android.bignerdranch.gamefortheages;
+package android.bignerdranch.gamefortheages.DrawView;
 
 import android.animation.ArgbEvaluator;
 import android.graphics.Canvas;

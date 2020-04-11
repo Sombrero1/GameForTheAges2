@@ -1,27 +1,21 @@
 package android.bignerdranch.gamefortheages;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
-import android.content.Context;
+import android.bignerdranch.gamefortheages.R;
+import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
+import android.bignerdranch.gamefortheages.levels.level_1;
+import android.bignerdranch.gamefortheages.levels.level_2;
+import android.bignerdranch.gamefortheages.levels.level_3;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class AfterStartEp1 extends AppCompatActivity implements communicationFragmentAndActivity{
+public class AfterStartEp1 extends AppCompatActivity implements communicationFragmentAndActivity {
 
 
    private ArrayList<Fragment> fragments= new ArrayList<Fragment>();
