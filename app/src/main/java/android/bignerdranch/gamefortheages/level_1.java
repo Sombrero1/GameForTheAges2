@@ -6,10 +6,12 @@ import android.animation.AnimatorSet;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -56,6 +58,14 @@ public class level_1 extends Fragment implements  View.OnTouchListener{
         CloudText = view.findViewById(R.id.CloudText);
 
 
+        // TEST
+      //  ConstraintLayout fff= (ConstraintLayout) view.findViewById(R.id.level_1);
+        //fff.setBackgroundColor(Color.WHITE);
+//
+
+
+
+
 
         cloud_dialoge_1 = (ImageView) view.findViewById(R.id.cloud_dialoge_first);
         Button = (ImageView) view.findViewById(R.id.Button);
@@ -68,17 +78,17 @@ public class level_1 extends Fragment implements  View.OnTouchListener{
 
         maincharacter = view.findViewById(R.id.maincharacter);
 
-            maincharacter.setBackgroundResource(R.drawable.morg);
-            mAnimationDrawable = (AnimationDrawable) maincharacter.getBackground();
-            mAnimationDrawable.start();
+        maincharacter.setBackgroundResource(R.drawable.morg);
+        mAnimationDrawable = (AnimationDrawable) maincharacter.getBackground();
+        mAnimationDrawable.start();
 
 
 
-            Animations.simpleAnimation(cloud_dialoge_1,R.animator.alpha_main_button, view.getContext());
+        Animations.simpleAnimation(cloud_dialoge_1,R.animator.alpha_main_button, view.getContext());
 
           //  cloud_dialoge_1.setImageResource(R.drawable.cloud_dialoge);
 
-            Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
+        Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
 
 
             Button.setOnTouchListener(this);

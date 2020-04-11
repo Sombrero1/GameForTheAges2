@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
 
 
 
+
         Display display = getWindowManager().getDefaultDisplay();
          width = display.getWidth();
          height = display.getHeight();

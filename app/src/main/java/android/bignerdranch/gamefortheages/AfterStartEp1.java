@@ -1,6 +1,7 @@
 package android.bignerdranch.gamefortheages;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -10,6 +11,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -49,6 +51,8 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
 
 
 
+
+
     }
 
 
@@ -70,8 +74,11 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
     {
         this.numberOfFragment=numberOfFragment;
 
+
         ActivityFragment = (Fragment)fragments.get(numberOfFragment);
         replaceFragment(ActivityFragment);
+
+
 
 
 

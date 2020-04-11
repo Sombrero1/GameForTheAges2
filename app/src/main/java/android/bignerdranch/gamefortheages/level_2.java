@@ -1,28 +1,19 @@
 package android.bignerdranch.gamefortheages;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Date;
-
 
 
 public class level_2 extends Fragment implements View.OnClickListener {
@@ -77,9 +68,10 @@ public class level_2 extends Fragment implements View.OnClickListener {
         Button3.setOnClickListener(this);
 
 
-
-
-
+        // TEST
+      //  ConstraintLayout fff= (ConstraintLayout) view.findViewById(R.id.level_1);
+       // fff.setBackgroundColor(Color.WHITE);
+//
 
 
 
