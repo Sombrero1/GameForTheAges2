@@ -32,7 +32,21 @@ public class Animations {
         beginImageSet.start();
     }
 
+    static public void HideButton(View v, View y, boolean choice,Context mContext){
+            if(choice) {
+                v.setVisibility(View.INVISIBLE);
+                y.setVisibility(View.INVISIBLE);
+            }
+            else{
+                v.setVisibility(View.VISIBLE);
+                y.setVisibility(View.VISIBLE);
+                Animations.simpleAnimation(v,R.animator.alpha_main_button,mContext);
+                Animations.simpleAnimation(y,R.animator.alpha_main_button,mContext);
 
+            }
+
+
+    }
 
 
 

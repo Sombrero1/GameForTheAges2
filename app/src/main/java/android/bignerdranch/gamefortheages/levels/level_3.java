@@ -1,14 +1,8 @@
 package android.bignerdranch.gamefortheages.levels;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
 import android.bignerdranch.gamefortheages.Animations;
 import android.bignerdranch.gamefortheages.R;
-import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,14 +10,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Date;
-
 
 
 public class level_3 extends Fragment implements View.OnClickListener {
@@ -60,7 +48,7 @@ public class level_3 extends Fragment implements View.OnClickListener {
 
 
 
-        CloudText = view.findViewById(R.id.CloudText);
+        CloudText = view.findViewById(R.id.CloudTextn);
         cloud_dialoge_1 = (ImageView) view.findViewById(R.id.cloud_dialoge_first);
         maincharacter = view.findViewById(R.id.maincharacter);
 
@@ -120,14 +108,13 @@ public class level_3 extends Fragment implements View.OnClickListener {
             case R.id.Button1:
 
                 Animations.AnimateMainButton(Button1,Button1Text,R.drawable.big_button_1,R.drawable.big_button_2);
-                CloudText.setText(R.string.answer1);
 
 
                 break;
 
             case R.id.Button2:
                 Animations.AnimateMainButton(Button2,Button2Text,R.drawable.big_button_1,R.drawable.big_button_2);
-                CloudText.setText(R.string.answer2);
+
                 break;
 
 
@@ -135,7 +122,7 @@ public class level_3 extends Fragment implements View.OnClickListener {
             case R.id.Button3:
                 Animations.AnimateMainButton(Button3,Button3Text,R.drawable.big_button_1,R.drawable.big_button_2);
 
-                CloudText.setText(R.string.answer3);
+
                 break;
 
 

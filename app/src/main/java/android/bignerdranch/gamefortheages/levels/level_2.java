@@ -2,19 +2,19 @@ package android.bignerdranch.gamefortheages.levels;
 
 import android.app.Activity;
 import android.bignerdranch.gamefortheages.Animations;
+import android.bignerdranch.gamefortheages.DrawView.MyThread;
 import android.bignerdranch.gamefortheages.R;
-import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,21 +27,30 @@ public class level_2 extends Fragment implements View.OnClickListener {
     ImageView maincharacter;
     ImageView cloud_dialoge_1;
 
+
+    ImageView Button0;
     ImageView Button1;
     ImageView Button2;
     ImageView Button3;
 
     TextView CloudText;
+    TextView CloudTextn;
 
+    TextView Button0Text;
     TextView Button1Text;
     TextView Button2Text;
     TextView Button3Text;
+
+
+    ImageView Plane;
+    ImageView Table1;
 
 
 
 
 
     boolean pressedButton=false;
+    boolean toOnetoTwo=false;
 
 
     private AnimationDrawable mAnimationDrawable;
@@ -55,26 +64,43 @@ public class level_2 extends Fragment implements View.OnClickListener {
 
 
         CloudText = view.findViewById(R.id.CloudText);
-        cloud_dialoge_1 = (ImageView) view.findViewById(R.id.cloud_dialoge_first);
-        maincharacter = view.findViewById(R.id.maincharacter);
+        CloudTextn=view.findViewById(R.id.CloudTextn);
+        CloudText.setText(R.string.level_2_dialoge_1);
+     //   cloud_dialoge_1 = (ImageView) view.findViewById(R.id.cloud_dialoge_first);
 
+        maincharacter = view.findViewById(R.id.maincharacter);
+        Plane = view.findViewById(R.id.Plane);
+        Table1 = view.findViewById(R.id.Table1);
+
+        Button0Text=view.findViewById(R.id.Button0Text);
         Button1Text=view.findViewById(R.id.Button1Text);
         Button2Text=view.findViewById(R.id.Button2Text);
         Button3Text=view.findViewById(R.id.Button3Text);
 
+        Button0=view.findViewById(R.id.Button0);
         Button1=view.findViewById(R.id.Button1);
         Button2=view.findViewById(R.id.Button2);
         Button3=view.findViewById(R.id.Button3);
 
+        Button0.setOnClickListener(this);
         Button1.setOnClickListener(this);
         Button2.setOnClickListener(this);
         Button3.setOnClickListener(this);
+
+        Animations.HideButton(Button1, Button1Text, true, view.getContext());
+        Animations.HideButton(Button2, Button2Text, true, view.getContext());
+        Animations.HideButton(Button3, Button3Text, true,view.getContext());
+        Plane.setVisibility(View.INVISIBLE);
+        Table1.setVisibility(View.INVISIBLE);
+
 
 
         // TEST
       //  ConstraintLayout fff= (ConstraintLayout) view.findViewById(R.id.level_1);
        // fff.setBackgroundColor(Color.WHITE);
 //
+            // 1 step
+        Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
 
 
 
@@ -91,12 +117,6 @@ public class level_2 extends Fragment implements View.OnClickListener {
         //cloud_dialoge_1.setImageResource(R.drawable.cloud_dialoge);
 
 
-        Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
-
-
-
-
-
 
 
 
@@ -110,29 +130,68 @@ public class level_2 extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
 
+            case R.id.Button0:
+
+
+              /*  new Handler().post(new Runnable() { @Override public void run() {
+                 //кнопка + пропадание текста через другой поток
+
+
+                    Animations.AnimateMainButton(Button0, Button0Text, R.drawable.big_button_1, R.drawable.big_button_2);
+
+
+                } });*/
+
+             //       mThread.simpleAnimation(CloudTextn,R.animator.alpha_main_button_reverse, view.getContext());
+                 //   mThread.AnimateMainButton(Button0,Button0Text,R.drawable.big_button_1,R.drawable.big_button_2);
+             //   Animations.AnimateMainButton(Button0, Button0Text, R.drawable.big_button_1, R.drawable.big_button_2);//кнопка + пропадание текста через другой поток
+
+
+
+                Animations.AnimateMainButton(Button0, Button0Text, R.drawable.big_button_1, R.drawable.big_button_2);
+
+                CloudTextn.setText(R.string.level_2_dialoge_2);
+
+
+
+                Animations.simpleAnimation(CloudText, R.animator.alpha_main_button_reverse, view.getContext());
+                  //  Animations.HideButton(Button0Text, Button0, true, view.getContext());
+                    maincharacter.animate().rotationBy(360f).setDuration(600).start();
+                    Animations.HideButton(Button1, Button1Text, false, view.getContext());
+                    Animations.HideButton(Button2, Button2Text, false, view.getContext());
+                    Animations.HideButton(Button3, Button3Text, false, view.getContext());
+                    Plane.setVisibility(View.VISIBLE);
+                    Animations.simpleAnimation(Plane, R.animator.translation, view.getContext());
+                    Table1.setVisibility(View.VISIBLE);
+                    Animations.simpleAnimation(Plane, R.animator.alpha_main_button, view.getContext());
+                    Animations.simpleAnimation(Table1, R.animator.alpha_main_button, view.getContext());
+
+
+                break;
+
 
 
             case R.id.Button1:
 
                 Animations.AnimateMainButton(Button1,Button1Text,R.drawable.big_button_1,R.drawable.big_button_2);
-                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
-                CloudText.setText(R.string.answer1);
+                Animations.simpleAnimation(CloudTextn,R.animator.alpha_main_button,view.getContext());
+                CloudTextn.setText(R.string.level_2_answer1);
 
 
                 break;
 
             case R.id.Button2:
                 Animations.AnimateMainButton(Button2,Button2Text,R.drawable.big_button_1,R.drawable.big_button_2);
-                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
-                CloudText.setText(R.string.answer2);
+                Animations.simpleAnimation(CloudTextn,R.animator.alpha_main_button,view.getContext());
+                CloudTextn.setText(R.string.level_2_answer2);
                 break;
 
 
 
             case R.id.Button3:
                 Animations.AnimateMainButton(Button3,Button3Text,R.drawable.big_button_1,R.drawable.big_button_2);
-                Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
-                CloudText.setText(R.string.answer3);
+                Animations.simpleAnimation(CloudTextn,R.animator.alpha_main_button,view.getContext());
+                CloudTextn.setText(R.string.level_2_answer3);
 
                 break;
 
@@ -141,7 +200,7 @@ public class level_2 extends Fragment implements View.OnClickListener {
 
         }
 
-         ((communicationFragmentAndActivity) mActivity).MailFromFragment(0); //следующий левел
+       //  ((communicationFragmentAndActivity) mActivity).MailFromFragment(0); //следующий левел
 
         /*
         Button1.setClickable(false);

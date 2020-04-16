@@ -9,23 +9,15 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+
     <ImageView
         android:id="@+id/maincharacter"
         android:layout_width="161dp"
         android:layout_height="163dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/cloud_dialoge_first"
-        android:layout_width="323dp"
-        android:layout_height="383dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cloud_dialoge" />
-
 
     <ImageView
         android:id="@+id/Button1"
@@ -42,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginBottom="108dp"
-        android:text="@string/button1"
+        android:text="@string/level_2_button1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -61,8 +53,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="172dp"
-        android:layout_marginBottom="112dp"
-        android:text="@string/button2"
+        android:layout_marginBottom="108dp"
+        android:text="@string/level_2_button2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -70,7 +62,7 @@
         android:id="@+id/Button3"
         android:layout_width="165dp"
         android:layout_height="142dp"
-        android:layout_marginStart="288dp"
+        android:layout_marginStart="284dp"
         android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,31 +72,64 @@
         android:id="@+id/Button3Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="340dp"
+        android:layout_marginStart="332dp"
         android:layout_marginBottom="108dp"
-        android:text="@string/button3"
+        android:text="@string/level_2_button3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/CloudText"
-        android:layout_width="165dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="84dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/dialoge_1"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/Plane"
+        android:layout_width="196dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="252dp"
+        android:src="@drawable/plane"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="294dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="184dp"
-        android:src="@drawable/plane"
+        android:id="@+id/Table1"
+        android:layout_width="300dp"
+        android:layout_height="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/table_survive" />
+
+    <ImageView
+        android:id="@+id/Button0"
+        android:layout_width="159dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/big_button_1" />
+
+    <TextView
+        android:id="@+id/Button0Text"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="24dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/Button0"
+        app:layout_constraintStart_toStartOf="@+id/Button0" />
+
+    <TextView
+        android:id="@+id/CloudText"
+        android:layout_width="371dp"
+        android:layout_height="195dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/CloudTextn"
+        android:layout_width="260dp"
+        android:layout_height="198dp"
+        android:layout_marginStart="468dp"
+        android:layout_marginTop="208dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
