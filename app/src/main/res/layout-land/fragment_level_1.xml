@@ -61,12 +61,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/graph"
-        android:layout_width="148dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="616dp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="43dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

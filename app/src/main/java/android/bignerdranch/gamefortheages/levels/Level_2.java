@@ -19,38 +19,32 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class level_2 extends Fragment implements View.OnClickListener {
-    View view;
-    Activity mActivity;
+public class Level_2 extends Fragment implements View.OnClickListener {
+    private View view;
+    private Activity mActivity;
 
 
-    ImageView maincharacter;
-    ImageView cloud_dialoge_1;
+    private ImageView maincharacter;
+    private ImageView cloud_dialoge_1;
 
 
-    ImageView Button0;
-    ImageView Button1;
-    ImageView Button2;
-    ImageView Button3;
+    private ImageView Button0;
+    private ImageView Button1;
+    private ImageView Button2;
+    private ImageView Button3;
 
-    TextView CloudText;
-    TextView CloudTextn;
+    private  TextView CloudText;
+    private TextView CloudTextn;
 
-    TextView Button0Text;
-    TextView Button1Text;
-    TextView Button2Text;
-    TextView Button3Text;
-
-
-    ImageView Plane;
-    ImageView Table1;
+    private TextView Button0Text;
+    private  TextView Button1Text;
+    private TextView Button2Text;
+    private TextView Button3Text;
 
 
+    private ImageView Plane;
+    private ImageView Table1;
 
-
-
-    boolean pressedButton=false;
-    boolean toOnetoTwo=false;
 
 
     private AnimationDrawable mAnimationDrawable;
@@ -161,7 +155,7 @@ public class level_2 extends Fragment implements View.OnClickListener {
                     Animations.HideButton(Button2, Button2Text, false, view.getContext());
                     Animations.HideButton(Button3, Button3Text, false, view.getContext());
                     Plane.setVisibility(View.VISIBLE);
-                    Animations.simpleAnimation(Plane, R.animator.translation, view.getContext());
+                    Animations.simpleAnimation(Plane, R.animator.alpha_main_button, view.getContext());
                     Table1.setVisibility(View.VISIBLE);
                     Animations.simpleAnimation(Plane, R.animator.alpha_main_button, view.getContext());
                     Animations.simpleAnimation(Table1, R.animator.alpha_main_button, view.getContext());

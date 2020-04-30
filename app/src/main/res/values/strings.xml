@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">How not to make mistakes</string>
     <string name="play">Начать!</string>
-    <string name="next">Дальше...</string>
+    <string name="next">Дальше</string>
 
     <string name="maincharacteranim">maincharacter</string>
 
@@ -35,6 +35,39 @@
 
 
     //level 3
+    <string name="level_3_dialoge_1">А теперь предлагаю тебе сыграть в игру. Ты должен сделать 100 ходов (1 ход = 10 подбрасываний) и выбить как можно больше орлов с точки зрения отношения к количеству бросков!  Твой же соперник (Его зовут Боб и он немного мнительный) кидает монетку 1000 раз за ход. Готов бросать?</string>
+    <string name="level_3_com_1">Ну и ну</string>
+    <string name="level_3_com_2">А Боб идёт стабильно с похожим счётом</string>
+    <string name="level_3_com_3">Хмм...Дай-ка я тебе помогу</string>
+    <string name="level_3_dialoge_2">Не кажется ли тебе... Что какой-то большой разброс у процентов? У тебя значения варьируются от 30% до 80%, в то время у соперника... у около 50% с небольшим отклонением... А не нужно ли из-за этого пересмотреть свои взгляды на пропорции? </string>
+    <string name="level_3_drop">Бросить</string>
+    <string name="level_3_dialoge_3">Какое в них самое интересное различие с точки зрения статистики?</string>
+    <string name="level_3_button1">Кол-во бросаний</string>
+    <string name="level_3_button2">Разброс</string>
+    <string name="level_3_button3">Просто случайность</string>
+
+
+    //level_4
+    <string name="level_4_dialoge_brok_1">Привет дружище! Держика письмо с прогнозом курса на завтра, всё сейчас бесплатно, просто показываю свои навыки</string>
+    <string name="level_4_button_0">Взять прогноз</string>
+    <string name="level_4_dialoge_brok_2">Хорошего дня!</string>
+    <string name="level_4_dialoge_1">И так Брок пришёл во второй раз... в третий... в четвёртый... И прогнозы сбылись! О чудо! Он точно разбирается в этом! Ты согласен?</string>
+    <string name="level_4_button_1">Конечно!</string>
+    <string name="level_4_button_2">Неа</string>
+    <string name="level_4_answer_1">Такой шанс упускать не стоит, поэтому с большим удовольствием покупаем его следующий уже платный прогноз</string>
+    <string name="level_4_answer_2">Видно ты не очень рисковый парень, тогда следующий (уже платный прогноз) куплю я</string>
+    <string name="level_4_dialoge_2">Ох... Мы потерпели фиаско, реальность противоположна гипнозу... Где же мы прогадали</string> далее
+    <string name="level_4_dialoge_3">Брок умнее, чем кажется... Давай-ка посмотрим как мы попали к нему в руки</string>
+    <string name="level_4_dialoge_4">Он обошёл 16 домов в районе... И каждой половине дал ровно противоположный прогноз!</string>
+    <string name="level_4_dialoge_5">8 домов...</string>
+    <string name="level_4_dialoge_6">С четырьмя домами он проделал аналогично </string>
+    <string name="level_4_dialoge_7">С двумя домами... А вот и ты! \n Хитрость состояла в том, что маловероятные события происходят довольно часто! Противоречиво?</string>
+    <string name="level_4_button_3">Именно</string>
+    <string name="level_4_button_4">Неа</string>
+    <string name="level_4_answer_1_1">В нашем обществе привыкли обращать на положительные результаты, а отрицательные... идут просто в архив. Как это проявилось с Броком? Да, он смог четыре раза подряд сделать ТЕБЕ верный прогноз...</string> далее
+    <string name="level_4_answer_1_1_next">Но ты не знал про его неудачи! Так 15-ым он не смог дать верно стабильный прогноз! Всё это приводит к ошибке выжившего и к большому... кругу заблуждений, что подробнее будет, когда мы с тобой поговорим про доказательство от маловероятного.</string>
+    <string name="level_4_answer_1_2"></string>
+
 
 
 

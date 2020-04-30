@@ -17,9 +17,10 @@ public class Animations {
 
 
 
-     static AnimatorSet Animation (View v, int xmlAnimation){
-        AnimatorSet Anim = (AnimatorSet) AnimatorInflater.loadAnimator(v.getContext(), R.animator.main_button);
+     static public AnimatorSet Animation (View v, int xmlAnimation){
+        AnimatorSet Anim = (AnimatorSet) AnimatorInflater.loadAnimator(v.getContext(), xmlAnimation);
         Anim.setTarget(v);
+
 
         return  Anim;
     }

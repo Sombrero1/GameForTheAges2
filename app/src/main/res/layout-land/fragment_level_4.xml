@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/level_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    tools:context=".level_1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/maincharacter"
+        android:layout_width="138dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="164dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="773dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/maincharacter"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/brok"
+        android:layout_width="144dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="624dp"
+        android:layout_marginTop="152dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialoge"
+        android:layout_width="217dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="72dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mail"
+        android:alpha="0"
+        android:layout_width="36dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="236dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mail" />
+
+
+    <ImageView
+        android:id="@+id/buttonImage"
+        android:layout_width="258dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="24dp"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:srcCompat="@drawable/big_button_1" />
+
+    <TextView
+        android:id="@+id/buttonText"
+        android:layout_width="105dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="36dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/buttonImage"
+        app:layout_constraintTop_toTopOf="@+id/buttonImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

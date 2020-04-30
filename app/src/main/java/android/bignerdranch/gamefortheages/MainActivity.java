@@ -91,18 +91,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
     public boolean onTouch(View v, MotionEvent event) {
         if (!bg_music.isPlaying()) bg_music.start();
 
-
-
-
-
-
-
-
-                    AnimateMainButton(btn, play, R.drawable.square, R.drawable.square_2);
-
-
-
-
+        AnimateMainButton(btn, play, R.drawable.square, R.drawable.square_2);
 
         return false;
     }

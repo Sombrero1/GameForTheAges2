@@ -23,22 +23,19 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 
-public class level_1 extends Fragment implements  View.OnTouchListener{
-    View view;
-    Activity mActivity;
+public class Level_1 extends Fragment implements  View.OnTouchListener{
+    private View view;
+    private Activity mActivity;
 
 
-    ImageView maincharacter;
-    ImageView cloud_dialoge_1;
-    ImageView Button;
-    TextView CloudText;
-    TextView ButtonText;
+    private ImageView maincharacter;
+    private ImageView cloud_dialoge_1;
+    private ImageView Button;
+    private TextView CloudText;
+    private TextView ButtonText;
 
-    Context mContext;
+    private Context mContext;
 
-
-
-    boolean pressedButton=false;
 
 
     private AnimationDrawable mAnimationDrawable;
@@ -51,26 +48,9 @@ public class level_1 extends Fragment implements  View.OnTouchListener{
 
 
         CloudText = view.findViewById(R.id.CloudTextn);
-
-
         // TEST
       //  ConstraintLayout fff= (ConstraintLayout) view.findViewById(R.id.level_1);
         //fff.setBackgroundColor(Color.WHITE);
-//
-        GraphView graph = (GraphView) view.findViewById(R.id.graph);
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
-                new DataPoint(0, 0),
-                new DataPoint(3, 5),
-                new DataPoint(6, 0),
-
-
-        });
-
-
-        graph.setTitleTextSize(23);
-        graph.setTitle("fff");
-        graph.setCursorMode(true);
-        graph.addSeries(series);
 
 
         cloud_dialoge_1 = (ImageView) view.findViewById(R.id.cloud_dialoge_first);
@@ -97,15 +77,7 @@ public class level_1 extends Fragment implements  View.OnTouchListener{
         Animations.simpleAnimation(CloudText,R.animator.alpha_main_button,view.getContext());
 
 
-            Button.setOnTouchListener(this);
-
-
-
-
-
-
-
-
+        Button.setOnTouchListener(this);
 
 
 
