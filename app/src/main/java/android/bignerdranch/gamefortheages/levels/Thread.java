@@ -1,36 +1,101 @@
 package android.bignerdranch.gamefortheages.levels;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
-import android.animation.ArgbEvaluator;
-import android.bignerdranch.gamefortheages.Animations;
-import android.bignerdranch.gamefortheages.R;
+
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
+import android.media.MediaPlayer;
 import android.util.Log;
-import android.view.SurfaceHolder;
-import android.view.View;
-import android.view.animation.Animation;
-import android.widget.ImageView;
-import android.widget.TextView;
+
+
 
 public class Thread extends java.lang.Thread {
+   MediaPlayer player;
+    Context mContext;
+    int name;
+    int duration;
+    boolean loop;
+    boolean playOnOff;
 
-    Thread(){
+    public Thread(){
+        super();
+    }
+
+    public void setMusic(boolean play, Context context, int name, int duration, boolean loop){
+        this.playOnOff=play;
+        this.mContext=context;
+        this.name=name;
+        this.duration=duration;
+        this.loop = loop;
+
+        if(player==null && context!=null) player=MediaPlayer.create(mContext,name);
+
+
+
+
 
     }
 
+    public void loopingMusic(boolean loop){
+        this.loop=loop; //скорее нет необходимости
 
+
+    }
+
+    public boolean playingMusic(){
+        try{
+            return player.isPlaying();
+        }
+        catch (NullPointerException e){
+            return false;
+        }
+
+    }
 
     @Override
     public void run() {
-       // super.run();
 
-      //  simpleAnimation(v,R.animator.alpha_main_button_reverse, mContext);
+        Log.e("ff", "run: "+player );
+        // super.run();\
+        if(player!=null) {
+            if(playOnOff){
+            if(duration==0){
+                while(loop){
+                  player.start();
+                    try {
+                        this.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
 
+            }
+            else{
+
+                player.start();
+                try {
+                    this.sleep(duration);
+                    player.stop();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+
+        }
+
+            else{
+                player.stop();
+            }
+
+        }
+
+
+            try {
+                this.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            run();
         }
 
 

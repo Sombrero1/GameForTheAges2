@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/button"
         android:layout_width="323dp"
         android:layout_height="135dp"
         android:layout_marginStart="188dp"
@@ -30,15 +30,14 @@
         app:srcCompat="@drawable/square" />
 
     <ImageView
-        android:id="@+id/maincharacter1"
+        android:id="@+id/maincharacter"
         android:layout_width="145dp"
         android:layout_height="157dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="120dp"
         android:transitionName="maincharacter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_character" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"

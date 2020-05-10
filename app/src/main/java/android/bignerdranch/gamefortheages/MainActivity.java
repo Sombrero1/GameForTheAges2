@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Display;
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
 
     int width,height;
 
-    private boolean pressedButton=false;
+
+    private AnimationDrawable mAnimationDrawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
@@ -56,13 +58,17 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
 
 
         bg_music = MediaPlayer.create(this, R.raw.bg_music);
+
         change = MediaPlayer.create(this, R.raw.change);
 
 
 
-        maincharacter = (ImageView)findViewById(R.id.maincharacter1);
+        maincharacter = (ImageView)findViewById(R.id.maincharacter);
+        maincharacter.setBackgroundResource(R.drawable.morg);
+        mAnimationDrawable = (AnimationDrawable) maincharacter.getBackground();
+        mAnimationDrawable.start();
 
-        btn= (ImageView) findViewById(R.id.imageView2);
+        btn= (ImageView) findViewById(R.id.button);
         play = (TextView) findViewById(R.id.textView);
         mContext=this;
 
@@ -78,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
 
 
 
+
         //
 
 
@@ -89,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        if (!bg_music.isPlaying()) bg_music.start();
+        if (bg_music.isPlaying()) bg_music.stop();
 
         AnimateMainButton(btn, play, R.drawable.square, R.drawable.square_2);
 

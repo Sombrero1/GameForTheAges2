@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorBrok">#FFD700</color>
+    <color name="colorSimple">#000000</color>
+    <color name="CornflowerBlue">#6495ED</color>
+    <color name="WhiteSmoke">#F5F5F5</color>
 </resources>

@@ -5,6 +5,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -57,9 +58,7 @@ public class Animations {
     public static boolean  AnimateMainButton(final ImageView Button, TextView textOfBut, final int startPicture, final int endPicture){
         Button.setImageResource(endPicture);
 
-
         //get
-
         AnimatorSet buttonSet = Animation(Button,R.animator.main_button);
         AnimatorSet textSet = Animation(textOfBut, R.animator.main_button);
 
@@ -68,6 +67,8 @@ public class Animations {
         togetherAnimationButtonSet.start();
 
         //
+        MediaPlayer soundButton=MediaPlayer.create(Button.getContext(),R.raw.change);
+        soundButton.start();
 
 
 

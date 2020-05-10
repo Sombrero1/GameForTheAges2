@@ -9,22 +9,23 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+
     <ImageView
         android:id="@+id/maincharacter"
-        android:layout_width="161dp"
-        android:layout_height="163dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="386dp"
+        android:layout_height="374dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageView
         android:id="@+id/Button"
         android:layout_width="323dp"
         android:layout_height="135dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:alpha="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/square" />
@@ -33,31 +34,23 @@
         android:id="@+id/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="260dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/yes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/cloud_dialoge_first"
-        android:layout_width="393dp"
-        android:layout_height="413dp"
-
-        android:layout_marginTop="84dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cloud_dialoge" />
+        app:layout_constraintBottom_toBottomOf="@+id/Button"
+        app:layout_constraintStart_toStartOf="@+id/Button" />
 
     <TextView
         android:id="@+id/CloudText"
-        android:layout_width="227dp"
-        android:layout_height="129dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="84dp"
+        android:layout_width="268dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="36dp"
         android:fontFamily="sans-serif-medium"
         android:textAlignment="center"
-        android:textColor="@android:color/background_dark"
+        android:textAllCaps="false"
+        android:textColor="#27CCDD"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
