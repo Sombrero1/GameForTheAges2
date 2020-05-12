@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.Interpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -49,6 +50,7 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
     private ImageView button3Image;
     private ImageView tableBiatlon;
     private ImageView biatlonist;
+    private ImageView tableBiatlonReal;
 
     private TextView dialoge;
     private TextView buttonText;
@@ -96,6 +98,8 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
         Animations.HideButton(button3Image,button3Text,true,getContext());
 
         tableBiatlon=view.findViewById(R.id.table_biatlon);
+        tableBiatlonReal=view.findViewById(R.id.table_biatlon_real);
+        tableBiatlonReal.setVisibility(View.INVISIBLE);
         tableBiatlon.setVisibility(View.INVISIBLE);
 
         maincharacter.setBackgroundResource(R.drawable.morg);//кадровая анимация героя
@@ -374,8 +378,9 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
                 dialoge.setText(R.string.level_3_dialoge_6);
                 Animations.simpleAnimation(dialoge,R.animator.alpha_main_button,getContext());
-                tableBiatlon.setImageResource(R.drawable.biatlon_2);
-                Animations.simpleAnimation(tableBiatlon,R.animator.alpha_main_button,getContext());
+                tableBiatlonReal.setVisibility(View.VISIBLE);
+                tableBiatlonReal.animate().translationX(500).setDuration(0).start();
+                tableBiatlonReal.animate().translationX(-18).setDuration(2000).setInterpolator(new LinearInterpolator()).start();
              break;
             case 10:
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
@@ -386,7 +391,9 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
                 break;
             case 11:
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
-                ((communicationFragmentAndActivity) mActivity).MailFromFragment(4);
+
+                ((communicationFragmentAndActivity)
+                        mActivity).MailFromFragment(4);
 
 
 

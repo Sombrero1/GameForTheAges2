@@ -188,7 +188,7 @@
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/biatlon_1" />
+        app:srcCompat="@drawable/biatlon_main_1" />
 
     <ImageView
         android:id="@+id/biatlonist"
@@ -199,6 +199,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/biatlonist" />
+
+    <ImageView
+        android:id="@+id/table_biatlon_real"
+        android:layout_width="48dp"
+        android:layout_height="309dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/biatlon_main_3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

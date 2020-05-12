@@ -53,7 +53,7 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
 
         thread1=new Thread(); //фоновая музыка
         thread2=new Thread();
-       thread1.start();
+        thread1.start();
         thread2.start();
 
 
