@@ -258,11 +258,13 @@ public class Level_2 extends Fragment implements View.OnClickListener {
 
                 break;
             case 4:
+                Animations.AnimateMainButton(Button0, Button0Text, R.drawable.big_button_1, R.drawable.big_button_2);
                 CloudTextn.setText(R.string.level_2_dialoge_5);
                 Animations.simpleAnimation(CloudTextn,R.animator.alpha_main_button,view.getContext());
                 k++;
                 break;
             case 5:
+                Animations.AnimateMainButton(Button0, Button0Text, R.drawable.big_button_1, R.drawable.big_button_2);
                 ((communicationFragmentAndActivity) mActivity).MailFromFragment(3);
 
 

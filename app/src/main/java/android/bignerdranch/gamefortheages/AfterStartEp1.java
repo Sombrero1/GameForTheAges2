@@ -15,9 +15,12 @@ import android.bignerdranch.gamefortheages.levels.Level_4;
 
 import android.bignerdranch.gamefortheages.levels.Thread;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -39,6 +42,9 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
         setContentView(R.layout.activity_after_start_ep1);
 
+        Bundle arguments = getIntent().getExtras();
+        if(arguments!=null && arguments.containsKey("level"))
+             numberOfFragment=arguments.getInt("level");
 
 
         fragments.add(new Level_1());
@@ -59,16 +65,12 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
 
     }
 
-
-
     private void replaceFragment(Fragment f){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.diagonaltranslate,R.anim.alpha);
         fragmentTransaction.replace(R.id.replace_, f);
         fragmentTransaction.commit();
-
-
 
 
     }
@@ -97,16 +99,10 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
 
 
                     thread1.setMusic(playOnOff,  getBaseContext(), name, duration,looping);
-
-
-
-
 //            backMusic.stop();
 //            backMusic=MediaPlayer.create(this.getBaseContext(),name);
 //           backMusic.setLooping(true);
 //           backMusic.start();
-
-
                 break;
             case 2:
                     thread2.setMusic(true,  getBaseContext(),name, duration,looping);
@@ -128,6 +124,19 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
 
     }
 
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(MainActivity.mProgress.getInt(MainActivity.APP_PREFERENCES_LEVEL,0)<++numberOfFragment){
+            SharedPreferences.Editor editor= MainActivity.mProgress.edit();
+            editor.putInt(MainActivity.APP_PREFERENCES_LEVEL,numberOfFragment );
+            editor.apply();
+            Log.e("WWWWWWWWWWWWWWWWW","WRITE"+numberOfFragment  );
+        }
+
+    }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -135,6 +144,9 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
         thread1.interrupt();
         thread2.setMusic(false, null, 0, 0, false);
         thread2.interrupt();
+//        Intent questionIntent = new Intent(AfterStartEp1.this, MainActivity.class);
+//        questionIntent.putExtra("update", true);
+//        startActivityForResult(questionIntent, 1);
 
     }
 

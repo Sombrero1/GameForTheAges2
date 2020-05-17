@@ -12,15 +12,12 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
-import android.net.sip.SipSession;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import android.provider.MediaStore;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -29,14 +26,6 @@ import android.view.animation.BounceInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-
-
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.series.DataPoint;
-import com.jjoe64.graphview.series.LineGraphSeries;
-
-
 
 
 public class Level_1 extends Fragment implements  View.OnTouchListener{
@@ -99,7 +88,7 @@ public class Level_1 extends Fragment implements  View.OnTouchListener{
         Button.setVisibility(View.INVISIBLE);
         ButtonText.setVisibility(View.INVISIBLE);
 
-        mLayout=view.findViewById(R.id.level_1);
+        mLayout=view.findViewById(R.id.save_level_1);
         ObjectAnimator background = ObjectAnimator.ofObject(mLayout,
                 "backgroundColor",
                 new ArgbEvaluator(),

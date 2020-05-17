@@ -349,8 +349,15 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
                 afterAnimation.start();
 
                 break;
-
             case 7:
+                Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
+                dialoge.setText(R.string.level_3_dialoge_3);
+                Animations.simpleAnimation(dialoge,R.animator.alpha_main_button,getContext());
+                buttonText.setText(R.string.yes);
+                Animations.simpleAnimation(buttonText,R.animator.alpha_main_button,getContext());
+                break;
+
+            case 8:
                 dialoge.setText(R.string.level_3_dialoge_4);
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
                 Animations.simpleAnimation(graphPlayer,R.animator.alpha_main_button_reverse,getContext());
@@ -366,7 +373,7 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
                 //появление биатлонитса
              break;
 
-            case 8://биатлон
+            case 9://биатлон
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
                 dialoge.setText(R.string.level_3_dialoge_5);
                 Animations.simpleAnimation(dialoge,R.animator.alpha_main_button,getContext());
@@ -374,7 +381,7 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
                 Animations.simpleAnimation(tableBiatlon,R.animator.alpha_main_button,getContext());
              break;
 
-            case 9:
+            case 10:
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
                 dialoge.setText(R.string.level_3_dialoge_6);
                 Animations.simpleAnimation(dialoge,R.animator.alpha_main_button,getContext());
@@ -382,14 +389,14 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
                 tableBiatlonReal.animate().translationX(500).setDuration(0).start();
                 tableBiatlonReal.animate().translationX(-18).setDuration(2000).setInterpolator(new LinearInterpolator()).start();
              break;
-            case 10:
+            case 11:
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
                 dialoge.setText(R.string.level_3_dialoge_7);
                 Animations.simpleAnimation(dialoge,R.animator.alpha_main_button,getContext());
                 buttonText.setText(R.string.yes);
                 Animations.simpleAnimation(buttonText,R.animator.alpha_main_button,getContext());
                 break;
-            case 11:
+            case 12:
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
 
                 ((communicationFragmentAndActivity)
