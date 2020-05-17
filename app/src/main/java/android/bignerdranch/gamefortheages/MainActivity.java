@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
         super.onResume();
 
         mProgress=getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
-      // SharedPreferences.Editor m= mProgress.edit();m.remove("level");m.apply(); стереть прогресс
+       //SharedPreferences.Editor m= mProgress.edit();m.remove("level");m.apply(); //стереть прогресс
         if(mProgress.contains(APP_PREFERENCES_LEVEL))
             levelOfSave=mProgress.getInt(APP_PREFERENCES_LEVEL,0);//если имеются пройденные уровни
         Log.e("FFFFFFFFFFFFFF",""+levelOfSave );

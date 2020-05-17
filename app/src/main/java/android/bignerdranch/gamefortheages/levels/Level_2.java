@@ -6,7 +6,6 @@ import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.bignerdranch.gamefortheages.Animations;
-import android.bignerdranch.gamefortheages.DrawView.MyThread;
 import android.bignerdranch.gamefortheages.R;
 import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
 import android.content.Context;
