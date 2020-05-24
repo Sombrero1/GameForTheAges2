@@ -52,7 +52,6 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
         fragments.add(new Level_3());
         fragments.add(new Level_4());
 
-
         ActivityFragment = (Fragment)fragments.get(--numberOfFragment);
         replaceFragment(ActivityFragment);
 
@@ -79,15 +78,8 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
     public void MailFromFragment(int numberOfFragment)
     {
         this.numberOfFragment=--numberOfFragment;
-
-
         ActivityFragment = (Fragment)fragments.get(numberOfFragment);
         replaceFragment(ActivityFragment);
-
-
-
-
-
 
     }
 
@@ -96,9 +88,7 @@ public class AfterStartEp1 extends AppCompatActivity implements communicationFra
     public void setMusic(int number, boolean playOnOff, int name, int duration, boolean looping){
         switch(number) {
             case 1:
-
-
-                    thread1.setMusic(playOnOff,  getBaseContext(), name, duration,looping);
+             thread1.setMusic(playOnOff,  getBaseContext(), name, duration,looping);
 //            backMusic.stop();
 //            backMusic=MediaPlayer.create(this.getBaseContext(),name);
 //           backMusic.setLooping(true);

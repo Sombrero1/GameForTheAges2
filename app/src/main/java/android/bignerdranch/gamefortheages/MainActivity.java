@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnTouchList
         Animations.simpleAnimation(btn,R.animator.alpha_main_button, mContext);
         Animations.simpleAnimation(play, R.animator.alpha_main_button,mContext);
         Animations.simpleAnimation(maincharacter, R.animator.main_character, mContext);
-        
+
         btn.setOnTouchListener(this);
         //Bundle arguments = getIntent().getExtras();
 //        if(arguments!=null &&  arguments.getBoolean("update")){ //при выходе с уровня, сохраняем и отображаем сразу прогресс

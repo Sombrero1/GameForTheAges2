@@ -155,28 +155,28 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
 
 
     int []  Generation(int game[]){
-        Random rand=new Random();
-        int chet1,chet2;
-        game=new int[200];
-        for (int j=0;j<200;j+=2) {
-            chet1=0;
-            chet2=0;
-            for (int i = 0; i < 10; i++) {
-                if (rand.nextBoolean()) chet1++;
+            Random rand=new Random();
+            int chet1,chet2;
+            game=new int[200];
+            for (int j=0;j<200;j+=2) {
+                chet1=0;
+                chet2=0;
+                for (int i = 0; i < 10; i++) {
+                    if (rand.nextBoolean()) chet1++;
 
 
+                }
+
+
+
+                for (int i = 0; i < 1000; i++) {
+                    if (rand.nextBoolean()) chet2++;
+                }
+
+                game[j]=chet1;
+                game[j+1]=chet2;
             }
-
-
-
-            for (int i = 0; i < 1000; i++) {
-                if (rand.nextBoolean()) chet2++;
-            }
-
-            game[j]=chet1;
-            game[j+1]=chet2;
-        }
-        return game;
+            return game;
     }
 
     @Override
@@ -251,7 +251,6 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
                 LineGraphSeries<DataPoint> os = new LineGraphSeries<DataPoint>(new DataPoint[]{
                         new DataPoint(0,0),
                         new DataPoint(0,1)
-
                     });
 
                 graphPlayer.setVisibility(View.VISIBLE);
