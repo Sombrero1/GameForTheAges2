@@ -5,9 +5,8 @@ import android.animation.AnimatorSet;
 import android.app.Activity;
 import android.bignerdranch.gamefortheages.Animations;
 import android.bignerdranch.gamefortheages.R;
-import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
+import android.bignerdranch.gamefortheages.CommunicationFragmentAndActivity;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,8 +17,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.ColorInt;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 public class Level_4 extends Fragment implements View.OnClickListener, View.OnTouchListener {
@@ -51,8 +48,8 @@ public class Level_4 extends Fragment implements View.OnClickListener, View.OnTo
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_level_4,container,false);
 
-        if( !((communicationFragmentAndActivity) mActivity).playingMusic(1))
-            ((communicationFragmentAndActivity) mActivity).setMusic(1,true,R.raw.bg_music,0, true);
+        if( !((CommunicationFragmentAndActivity) mActivity).playingMusic(1))
+            ((CommunicationFragmentAndActivity) mActivity).setMusic(1,true,R.raw.bg_music,0, true);
 
         buttonImage=view.findViewById(R.id.buttonImage);
         buttonText=view.findViewById(R.id.buttonText);

@@ -2,30 +2,24 @@ package android.bignerdranch.gamefortheages.levels;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
-import android.animation.TimeInterpolator;
 import android.app.Activity;
 import android.bignerdranch.gamefortheages.Animations;
 import android.bignerdranch.gamefortheages.R;
-import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
+import android.bignerdranch.gamefortheages.CommunicationFragmentAndActivity;
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
-import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.BounceInterpolator;
-import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -75,8 +69,8 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       if( !((communicationFragmentAndActivity) mActivity).playingMusic(1)){
-           ((communicationFragmentAndActivity) mActivity).setMusic(1,true,R.raw.bg_music,0, true);}
+       if( !((CommunicationFragmentAndActivity) mActivity).playingMusic(1)){
+           ((CommunicationFragmentAndActivity) mActivity).setMusic(1,true,R.raw.bg_music,0, true);}
 
         view = inflater.inflate(R.layout.fragment_level_3,container,false);
 
@@ -398,7 +392,7 @@ public class Level_3 extends Fragment implements View.OnClickListener, View.OnTo
             case 12:
                 Animations.AnimateMainButton(buttonImage,buttonText,R.drawable.big_button_1,R.drawable.big_button_2);
 
-                ((communicationFragmentAndActivity)
+                ((CommunicationFragmentAndActivity)
                         mActivity).MailFromFragment(4);
 
 

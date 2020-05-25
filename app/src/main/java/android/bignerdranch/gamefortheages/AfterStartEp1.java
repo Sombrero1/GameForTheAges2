@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.bignerdranch.gamefortheages.R;
-import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
 import android.bignerdranch.gamefortheages.levels.Level_1;
 import android.bignerdranch.gamefortheages.levels.Level_2;
 import android.bignerdranch.gamefortheages.levels.Level_3;
@@ -14,17 +12,14 @@ import android.bignerdranch.gamefortheages.levels.Level_4;
 
 
 import android.bignerdranch.gamefortheages.levels.Thread;
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 
 import java.util.ArrayList;
 
-public class AfterStartEp1 extends AppCompatActivity implements communicationFragmentAndActivity {
+public class AfterStartEp1 extends AppCompatActivity implements CommunicationFragmentAndActivity {
 
 
    private ArrayList<Fragment> fragments= new ArrayList<Fragment>();

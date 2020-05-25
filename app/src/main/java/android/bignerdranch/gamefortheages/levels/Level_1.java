@@ -7,7 +7,7 @@ import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.bignerdranch.gamefortheages.Animations;
 import android.bignerdranch.gamefortheages.R;
-import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
+import android.bignerdranch.gamefortheages.CommunicationFragmentAndActivity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
@@ -144,7 +144,7 @@ public class Level_1 extends Fragment implements  View.OnTouchListener{
                 drumroll.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {//слушатель на барабаны для запуска фоновой музыки
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        ((communicationFragmentAndActivity) mActivity).setMusic(1,true,R.raw.bg_music,0, true);
+                        ((CommunicationFragmentAndActivity) mActivity).setMusic(1,true,R.raw.bg_music,0, true);
                         drumroll.setOnCompletionListener(null);
                     }
                 });
@@ -183,7 +183,7 @@ public class Level_1 extends Fragment implements  View.OnTouchListener{
             case 2:
                 Animations.AnimateMainButton(Button, ButtonText, R.drawable.big_button_1, R.drawable.big_button_2);
 
-               ((communicationFragmentAndActivity) mActivity).MailFromFragment(2);
+               ((CommunicationFragmentAndActivity) mActivity).MailFromFragment(2);
 
 
         }

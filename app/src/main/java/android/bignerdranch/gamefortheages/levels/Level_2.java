@@ -1,15 +1,13 @@
 package android.bignerdranch.gamefortheages.levels;
 
 import android.animation.Animator;
-import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.bignerdranch.gamefortheages.Animations;
 import android.bignerdranch.gamefortheages.R;
-import android.bignerdranch.gamefortheages.communicationFragmentAndActivity;
+import android.bignerdranch.gamefortheages.CommunicationFragmentAndActivity;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -21,13 +19,10 @@ import androidx.interpolator.view.animation.FastOutLinearInInterpolator;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator;
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.BounceInterpolator;
 import android.view.animation.OvershootInterpolator;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -73,8 +68,8 @@ public class Level_2 extends Fragment implements View.OnClickListener {
 
         view = inflater.inflate(R.layout.fragment_level_2,container,false);
 
-        if(! ((communicationFragmentAndActivity) mActivity).playingMusic(1))
-            ((communicationFragmentAndActivity) mActivity).setMusic(1,true,R.raw.bg_music,0, true);
+        if(! ((CommunicationFragmentAndActivity) mActivity).playingMusic(1))
+            ((CommunicationFragmentAndActivity) mActivity).setMusic(1,true,R.raw.bg_music,0, true);
 
         CloudText = view.findViewById(R.id.CloudText);
         CloudTextn=view.findViewById(R.id.CloudTextn);
@@ -248,7 +243,7 @@ public class Level_2 extends Fragment implements View.OnClickListener {
                 Animations.simpleAnimation(Table1,R.animator.alpha_main_button_reverse,view.getContext());
 
                 background.addListener(beforeDolphine);//после слушатель
-                ((communicationFragmentAndActivity)mActivity).setMusic(2,true,R.raw.dolphin,6000,false);
+                ((CommunicationFragmentAndActivity)mActivity).setMusic(2,true,R.raw.dolphin,6000,false);
                 background.start();
                 CloudTextn.setVisibility(View.INVISIBLE);
 
@@ -264,7 +259,7 @@ public class Level_2 extends Fragment implements View.OnClickListener {
                 break;
             case 5:
                 Animations.AnimateMainButton(Button0, Button0Text, R.drawable.big_button_1, R.drawable.big_button_2);
-                ((communicationFragmentAndActivity) mActivity).MailFromFragment(3);
+                ((CommunicationFragmentAndActivity) mActivity).MailFromFragment(3);
 
 
 

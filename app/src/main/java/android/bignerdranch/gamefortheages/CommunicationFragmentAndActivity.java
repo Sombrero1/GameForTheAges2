@@ -2,7 +2,7 @@ package android.bignerdranch.gamefortheages;
 
 import android.content.Context;
 
-public interface communicationFragmentAndActivity {
+public interface CommunicationFragmentAndActivity {
 
 
     public void MailFromFragment(int numberOfFragment);
